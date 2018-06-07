@@ -12,5 +12,11 @@ public class Consumer {
         System.out.println("收到消息-------"+text);
     }
 
+	
+	    @JmsListener(destination = "*")
+    public void receiveMsg(Message text){
+        System.out.println(text);
+    }
+
 
 }
